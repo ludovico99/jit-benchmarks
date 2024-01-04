@@ -11,7 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "time.h"
-
+#include <sys/types.h>
+#include <unistd.h>
 
 typedef struct tn {
     struct tn*    left;

@@ -6,7 +6,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <math.h>       
+#include <sys/types.h>
+#include <unistd.h>
+
 #include "time.h"
 
 double eval_A(int i, int j) { return 1.0/((i+j)*(i+j+1)/2+i+1); }

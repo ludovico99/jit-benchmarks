@@ -7,7 +7,9 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>       
+#include <sys/types.h>
+#include <unistd.h>
 #include "time.h"
 
 inline static int max(int a, int b)
