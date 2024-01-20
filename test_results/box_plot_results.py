@@ -18,7 +18,7 @@ colors = ["#03045e", "#023e8a", "#0077b6", "#0096c7", "#00b4d8", "#48cae4", "#90
 
 #################### only change this #########################
 
-RES_FOLDER = "1705749488_test/"
+RES_FOLDER = "1705771909_test/"
 
 no_mod_times = pd.read_csv(RES_FOLDER + "no_module.csv")
 page_sync_times = pd.read_csv(RES_FOLDER + "page_sync.csv")

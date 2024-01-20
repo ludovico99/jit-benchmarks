@@ -21,9 +21,16 @@ apt install ruby
 pip3 install numpy
 pip3 install pandas
 
+#-------------------------------------------------------------------- not mod --------------------------------------------------------------------
+
+# #run test
+# popd
+# python3 jit_test_fine.py $test_folder/no_module.csv
+# chown $user $test_folder/no_module.csv
+# pushd ../..
+
 #-------------------------------------------------------------------- zone sync --------------------------------------------------------------------
 
-# mount module
 make EXTRA_CFLAGS=-DZONE_KERNEL_SYNC_CHECK
 insmod hook.ko
 
@@ -41,31 +48,23 @@ pushd ../..
 kill -9 $AGENT_PID
 rmmod hook.ko
 
-#---------------------------------------------------------------------- page sync --------------------------------------------------------------------
+# #---------------------------------------------------------------------- page sync --------------------------------------------------------------------
 
-# mount module
-make 
-insmod hook.ko
+# make 
+# insmod hook.ko
 
-# start agent
-python3 user/agent_page.py &
-AGENT_PID=$!
+# # start agent
+# python3 user/agent_page.py &
+# AGENT_PID=$!
 
-#run test
-popd
-python3 jit_test_fine.py $test_folder/page_sync.csv
-chown $user $test_folder/page_sync.csv
-pushd ../..
+# #run test
+# popd
+# python3 jit_test_fine.py $test_folder/page_sync.csv
+# chown $user $test_folder/page_sync.csv
+# pushd ../..
 
-# clean up
-kill -9 $AGENT_PID
-rmmod hook.ko
+# # clean up
+# kill -9 $AGENT_PID
+# rmmod hook.ko
 
-#-------------------------------------------------------------------- not mod --------------------------------------------------------------------
-
-#run test
-popd
-python3 jit_test_fine.py $test_folder/no_module.csv
-chown $user $test_folder/no_module.csv
-pushd ../..
 
