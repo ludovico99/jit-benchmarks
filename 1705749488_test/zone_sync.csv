@@ -1,0 +1,20 @@
+,Language,Test Name,Real Time,User Time,Sys Time,N
+0,PHP,fannkuchredux,0.18,0.15,0.01,9
+1,Ruby2,fannkuchredux,0.67,0.63,0.02,9
+2,LuaJit,fannkuchredux,0.53,0.48,0.01,10
+3,C,fannkuchredux,0.69,0.65,0.02,10
+4,PHP,spectralnorm,0.46,0.43,0.0,500
+5,Ruby2,spectralnorm,0.44,0.43,0.0,200
+6,LuaJit,spectralnorm,0.39,0.39,0.0,2000
+7,C,spectralnorm,0.0,0.0,0.0,1000
+8,Ruby2,matmul,0.15,0.13,0.01,100
+9,LuaJit,matmul,0.39,0.34,0.02,600
+10,C,matmul,0.0,0.0,0.0,400
+11,PHP,binarytrees,0.23,0.19,0.02,13
+12,Ruby2,binarytrees,0.4,0.37,0.02,13
+13,LuaJit,binarytrees,0.34,0.32,0.01,13
+14,C,binarytrees,0.0,0.0,0.0,15
+15,PHP,fasta,0.43,0.36,0.05,500000
+16,Ruby2,fasta,2.71,2.62,0.06,500000
+17,LuaJit,fasta,0.76,0.59,0.16,1000000
+18,C,fasta,0.39,0.33,0.02,1000000
