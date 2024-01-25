@@ -34,21 +34,19 @@ pip3 install pandas
 make EXTRA_CFLAGS=-DZONE_KERNEL_SYNC_CHECK
 insmod hook.ko
 
-# start agent
-python3 user/agent_zone.py &
-AGENT_PID=$!
+# python3 user/agent_zone.py &
+# AGENT_PID=$!
 
-#run test
 popd
 python3 jit_test_fine.py $test_folder/zone_sync.csv
 chown $user $test_folder/zone_sync.csv
 pushd ../..
 
-# clean up
 kill -9 $AGENT_PID
+wait $AGENT_PID
 rmmod hook.ko
 
-# #---------------------------------------------------------------------- page sync --------------------------------------------------------------------
+#---------------------------------------------------------------------- page sync --------------------------------------------------------------------
 
 # make 
 # insmod hook.ko
@@ -65,6 +63,7 @@ rmmod hook.ko
 
 # # clean up
 # kill -9 $AGENT_PID
+# wait $AGENT_PID
 # rmmod hook.ko
 
 
