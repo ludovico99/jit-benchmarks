@@ -68,15 +68,15 @@ class Language:
 
 TESTED_LANGUAGES = [
     Language("C", ".c", "./{} {}", False, True, "gcc {} -o a.out -lm", "a.out"),
-    #https://stitcher.io/blog/php-8-jit-setup
-    Language("PHP", ".php", "php -dopcache.enable_cli=1 -dopcache.enable=1 -dopcache.jit_buffer_size=500M -dopcache.jit=1255 {} {}", True, False),
-    Language("LuaJit", ".lua", "luajit {} {}", True, False),
-    Language("Ruby2", ".rb", "ruby --jit {} {}", True, False) # No WX pages????
+    # #https://stitcher.io/blog/php-8-jit-setup
+    # Language("PHP", ".php", "php -dopcache.enable_cli=1 -dopcache.enable=1 -dopcache.jit_buffer_size=500M -dopcache.jit=1255 {} {}", True, False),
+    # Language("LuaJit", ".lua", "luajit {} {}", True, False),
+    # Language("Ruby2", ".rb", "ruby --jit {} {}", True, False) # No WX pages????
 ]
 
 SRC_FOLDER = "."
 
-TEST_NUMBER = 1
+TEST_NUMBER = 10
 
 FILES = [
         "fasta",
