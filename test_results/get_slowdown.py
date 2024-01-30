@@ -2,8 +2,9 @@ from math import nan
 import pandas as pd
 import numpy as np
 import json 
+import pdfkit
 
-RES_FOLDER = "1704397927_test/"
+RES_FOLDER = "1706654791_test/"
 
 no_mod_times = pd.read_csv(RES_FOLDER + "no_module.csv")
 page_sync_times = pd.read_csv(RES_FOLDER + "page_sync.csv")
@@ -43,10 +44,12 @@ for l in languages:
             slowdown["LKM Page sync check"].append((page_sync_med-no_mod_med)/no_mod_med)
             slowdown["LKM Zone sync check"].append((zone_sync_med-no_mod_med)/no_mod_med)
         
-        print(f"{l} & {t} & ${(page_sync_med-no_mod_med)/no_mod_med*100:.2f}\\%$ & ${(zone_sync_med-no_mod_med)/no_mod_med*100:.2f}\\%$ \\\\")
+        print(f"LANGUAGE: {l}, TEST: {t} --> PAGE_SYNC: ${(page_sync_med-no_mod_med)/no_mod_med*100:.2f}% - ZONE_SYNC: ${(zone_sync_med-no_mod_med)/no_mod_med*100:.2f}%")
 
 # print(json.dumps(medians, indent=1))
 
 slow_pd = pd.DataFrame(slowdown)
 
-# print(slow_pd)
+print(slow_pd)
+
+slow_pd.to_csv("slowdown.csv")
