@@ -4,7 +4,7 @@ import numpy as np
 import json 
 import pdfkit
 
-RES_FOLDER = "1706654791_test/"
+RES_FOLDER = "1706702098_test/"
 
 no_mod_times = pd.read_csv(RES_FOLDER + "no_module.csv")
 page_sync_times = pd.read_csv(RES_FOLDER + "page_sync.csv")
