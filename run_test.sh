@@ -23,27 +23,27 @@ pushd ../..
 
 #-------------------------------------------------------------------- not mod --------------------------------------------------------------------
 
-# popd
-# python3 jit_test_fine.py $test_folder/no_module.csv
-# chown $user $test_folder/no_module.csv
-# pushd ../..
+popd
+python3 jit_test_fine.py $test_folder/no_module.csv
+chown $user $test_folder/no_module.csv
+pushd ../..
 
 #-------------------------------------------------------------------- zone sync --------------------------------------------------------------------
 
-# make EXTRA_CFLAGS=-DZONE_KERNEL_SYNC_CHECK
-# insmod hook.ko
+make EXTRA_CFLAGS=-DZONE_KERNEL_SYNC_CHECK
+insmod hook.ko
 
-# python3 user/agent_zone.py &
-# AGENT_PID=$!
+python3 user/agent_zone.py &
+AGENT_PID=$!
 
-# popd
-# python3 jit_test_fine.py $test_folder/zone_sync.csv
-# chown $user $test_folder/zone_sync.csv
-# pushd ../..
+popd
+python3 jit_test_fine.py $test_folder/zone_sync.csv
+chown $user $test_folder/zone_sync.csv
+pushd ../..
 
-# kill -9 $AGENT_PID
-# wait $AGENT_PID
-# rmmod hook.ko
+kill -9 $AGENT_PID
+wait $AGENT_PID
+rmmod hook.ko
 
 #---------------------------------------------------------------------- page sync --------------------------------------------------------------------
 
@@ -61,5 +61,8 @@ pushd ../..
 kill -9 $AGENT_PID
 wait $AGENT_PID
 rmmod hook.ko
+
+
+
 
 
