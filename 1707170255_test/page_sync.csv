@@ -1,0 +1,25 @@
+,Language,Test Name,Real Time,User Time,Sys Time,N
+0,PHP,fannkuchredux,0.34,0.3,0.03,9
+1,PHP,fannkuchredux,0.36,0.34,0.02,9
+2,PHP,fannkuchredux,0.35,0.32,0.02,9
+3,PHP,fannkuchredux,0.33,0.3,0.02,9
+4,PHP,fannkuchredux,0.33,0.29,0.02,9
+5,PHP,fannkuchredux,0.33,0.29,0.03,9
+6,PHP,spectralnorm,0.3,0.26,0.02,250
+7,PHP,spectralnorm,0.32,0.29,0.02,250
+8,PHP,spectralnorm,0.33,0.27,0.03,250
+9,PHP,spectralnorm,0.29,0.27,0.02,250
+10,PHP,spectralnorm,0.29,0.26,0.02,250
+11,PHP,spectralnorm,0.29,0.27,0.02,250
+12,PHP,binarytrees,0.4,0.36,0.03,13
+13,PHP,binarytrees,0.39,0.35,0.03,13
+14,PHP,binarytrees,0.45,0.39,0.03,13
+15,PHP,binarytrees,0.38,0.35,0.02,13
+16,PHP,binarytrees,0.38,0.35,0.03,13
+17,PHP,binarytrees,0.4,0.35,0.02,13
+18,PHP,fasta,0.33,0.28,0.03,200000
+19,PHP,fasta,0.34,0.24,0.09,200000
+20,PHP,fasta,0.32,0.2,0.1,200000
+21,PHP,fasta,0.34,0.21,0.12,200000
+22,PHP,fasta,0.35,0.2,0.13,200000
+23,PHP,fasta,0.33,0.27,0.03,200000
