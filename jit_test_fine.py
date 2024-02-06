@@ -68,9 +68,9 @@ class Language:
             return run_time_command(self.run_cmd.format(file, N), executions)
 
 TESTED_LANGUAGES = [
-    # Language("C", ".c", "./{} {}", False, True, "gcc {} -o a.out -lm", "a.out"),
+    Language("C", ".c", "./{} {}", False, True, "gcc {} -o a.out -lm", "a.out"),
     # #https://stitcher.io/blog/php-8-jit-setup
-    Language("PHP", ".php", "php {} {}", True, False),
+    # Language("PHP", ".php", "php {} {}", True, False),
     # Language("PYTHON", ".py", "python3.10 {} {}", True, False),
     # Language("LuaJit", ".lua", "luajit {} {}", True, False),
     # Language("Ruby2", ".rb", "ruby --jit {} {}", True, False) # No WX pages????
@@ -78,7 +78,7 @@ TESTED_LANGUAGES = [
 
 SRC_FOLDER = "."
 
-TEST_NUMBER = 6
+TEST_NUMBER = 10
 
 FILES = [
         "fasta",
