@@ -10,17 +10,17 @@ from matplotlib.patches import Polygon
 from itertools import repeat
 
 # GRAPH_TYPE = "C"
-GRAPH_TYPE = "PHP"
+# GRAPH_TYPE = "PHP"
 # GRAPH_TYPE = "PYTHON"
-# GRAPH_TYPE = "LuaJit"
-# GRAPH_TYPE = "Ruby2"
+GRAPH_TYPE = "LuaJit"
+# GRAPH_TYPE = "Ruby"
 
 
 colors = ["#03045e", "#023e8a", "#0077b6", "#0096c7", "#00b4d8", "#48cae4", "#90e0ef"]
 
 #################### only change this #########################
 
-RES_FOLDER = "1707170255_test/"
+RES_FOLDER = "1708011675_test/"
 
 no_mod_times = pd.read_csv(RES_FOLDER + "no_module.csv")
 page_sync_times = pd.read_csv(RES_FOLDER + "page_sync.csv")

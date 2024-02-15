@@ -70,10 +70,10 @@ class Language:
 TESTED_LANGUAGES = [
     Language("C", ".c", "./{} {}", False, True, "gcc {} -o a.out -lm", "a.out"),
     # #https://stitcher.io/blog/php-8-jit-setup
-    # Language("PHP", ".php", "php {} {}", True, False),
+    # Language("PHP", ".php", "php -dopcache.enable_cli=1 -dopcache.enable=1 -dopcache.jit_buffer_size=100M -dopcache.jit=1255 {} {}", True, False),
     # Language("PYTHON", ".py", "python3.10 {} {}", True, False),
     # Language("LuaJit", ".lua", "luajit {} {}", True, False),
-    # Language("Ruby2", ".rb", "ruby --jit {} {}", True, False) # No WX pages????
+    # Language("Ruby", ".rb", "ruby --jit {} {}", True, False) # No WX pages????
 ]
 
 SRC_FOLDER = "."
@@ -121,7 +121,7 @@ EXECUTIONS = {
         "spectralnorm":2000,
         "binarytrees":13,
     },
-    "Ruby2": {
+    "Ruby": {
         "fasta":50000,
         "matmul":100,
         "fannkuchredux":9,
